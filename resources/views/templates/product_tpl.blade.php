@@ -56,7 +56,7 @@
                             </div> 
                             <!-- showing -->
                             <div class="showing f-right text-right">
-                                <span>Hiển thị: 01-09 trong 17.</span>
+                                <!-- <span>Hiển thị: 01-09 trong 17.</span> -->
                             </div>                                   
                         </div>
                         <!-- shop-option end -->
@@ -70,13 +70,13 @@
                                     <div class="col-md-4 col-sm-4 col-xs-12">
                                         <div class="product-item">
                                             <div class="product-img">
-                                                <a href="single-product-left-sidebar.html">
+                                                <a href="{{url('san-pham/'.$p->alias.'.html')}}">
                                                     <img src="{{asset('upload/product/'.$p->photo)}}" alt=""/>
                                                 </a>
                                             </div>
                                             <div class="product-info">
                                                 <h2 class="product-title">
-                                                    <a href="single-product-left-sidebar.html">{{$p->name}} </a>
+                                                    <a href="{{url('san-pham/'.$p->alias.'.html')}}">{{$p->name}} </a>
                                                 </h2>
                                                 <h3 class="pro-price">{{number_format($p->price)}}</h3>
                                                 <ul class="action-button">
@@ -98,23 +98,24 @@
                             <div role="tabpanel" class="tab-pane" id="list-view">
                                 <div class="row">
                                     <!-- product-item start -->
+                                    @foreach($products as $p)
                                     <div class="col-md-12">
                                         <div class="shop-list product-item">
                                             <div class="product-img">
-                                                <a href="single-product-left-sidebar.html">
-                                                    <img src="img/product/7.jpg" alt=""/>
+                                                <a href="{{url('san-pham/'.$p->alias.'.html')}}">
+                                                    <img src="{{asset('upload/product/'.$p->photo)}}" alt=""/>
                                                 </a>
                                             </div>
                                             <div class="product-info">
                                                 <div class="clearfix">
                                                     <h2 class="product-title f-left">
-                                                        <a href="single-product-left-sidebar.html">Dummy Tên sản phẩm </a>
+                                                        <a href="{{url('san-pham/'.$p->alias.'.html')}}">{{$p->name}} </a>
                                                     </h2>
                                                     
                                                 </div>
                                                 <h6 class="brand-name mb-30">Tên thương hiệu</h6>
-                                                <h3 class="pro-price">869.000</h3>
-                                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                                                <h3 class="pro-price">{{number_format($p->price)}}</h3>
+                                                <p>{!! $p->mota !!}</p>
                                                 <ul class="action-button">
                                                     <li>
                                                         <a href="#" data-toggle="modal"  data-target="#productModal" title="Quickview"><i class="zmdi zmdi-zoom-in"></i></a>
@@ -126,131 +127,13 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- product-item end -->
-                                    <!-- product-item start -->
-                                    <div class="col-md-12">
-                                        <div class="shop-list product-item">
-                                            <div class="product-img">
-                                                <a href="single-product-left-sidebar.html">
-                                                    <img src="img/product/10.jpg" alt=""/>
-                                                </a>
-                                            </div>
-                                            <div class="product-info">
-                                                <div class="clearfix">
-                                                    <h2 class="product-title f-left">
-                                                        <a href="single-product-left-sidebar.html">Dummy Tên sản phẩm </a>
-                                                    </h2>
-                                                </div>
-                                                <h6 class="brand-name mb-30">Tên thương hiệu</h6>
-                                                <h3 class="pro-price">869.000</h3>
-                                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-                                                <ul class="action-button">
-                                                    <li>
-                                                        <a href="#" data-toggle="modal"  data-target="#productModal" title="Quickview"><i class="zmdi zmdi-zoom-in"></i></a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" title="Thêm vào giỏ hàng"><i class="zmdi zmdi-shopping-cart-plus"></i></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- product-item end -->
-                                    <!-- product-item start -->
-                                    <div class="col-md-12">
-                                        <div class="shop-list product-item">
-                                            <div class="product-img">
-                                                <a href="single-product-left-sidebar.html">
-                                                    <img src="img/product/4.jpg" alt=""/>
-                                                </a>
-                                            </div>
-                                            <div class="product-info">
-                                                <div class="clearfix">
-                                                    <h2 class="product-title f-left">
-                                                        <a href="single-product-left-sidebar.html">Dummy Tên sản phẩm </a>
-                                                    </h2>
-                                                </div>
-                                                <h6 class="brand-name mb-30">Tên thương hiệu</h6>
-                                                <h3 class="pro-price">869.00</h3>
-                                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-                                                <ul class="action-button">
-                                                    <li>
-                                                        <a href="#" data-toggle="modal"  data-target="#productModal" title="Quickview"><i class="zmdi zmdi-zoom-in"></i></a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" title="Thêm vào giỏ hàng"><i class="zmdi zmdi-shopping-cart-plus"></i></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- product-item end -->
-                                    <!-- product-item start -->
-                                    <div class="col-md-12">
-                                        <div class="shop-list product-item">
-                                            <div class="product-img">
-                                                <a href="single-product-left-sidebar.html">
-                                                    <img src="img/product/8.jpg" alt=""/>
-                                                </a>
-                                            </div>
-                                            <div class="product-info">
-                                                <div class="clearfix">
-                                                    <h2 class="product-title f-left">
-                                                        <a href="single-product-left-sidebar.html">Dummy Tên sản phẩm </a>
-                                                    </h2>
-                                                    
-                                                </div>
-                                                <h6 class="brand-name mb-30">Tên thương hiệu</h6>
-                                                <h3 class="pro-price">$ 869.00</h3>
-                                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-                                                <ul class="action-button">
-                                                    <li>
-                                                        <a href="#" data-toggle="modal"  data-target="#productModal" title="Quickview"><i class="zmdi zmdi-zoom-in"></i></a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" title="Thêm vào giỏ hàng"><i class="zmdi zmdi-shopping-cart-plus"></i></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- product-item end -->
-                                    <!-- product-item start -->
-                                    <div class="col-md-12">
-                                        <div class="shop-list product-item">
-                                            <div class="product-img">
-                                                <a href="single-product-left-sidebar.html">
-                                                    <img src="img/product/2.jpg" alt=""/>
-                                                </a>
-                                            </div>
-                                            <div class="product-info">
-                                                <div class="clearfix">
-                                                    <h2 class="product-title f-left">
-                                                        <a href="single-product-left-sidebar.html">Dummy Tên sản phẩm </a>
-                                                    </h2>
-                                                    
-                                                </div>
-                                                <h6 class="brand-name mb-30">Tên thương hiệu</h6>
-                                                <h3 class="pro-price">$ 869.00</h3>
-                                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-                                                <ul class="action-button">
-                                                    <li>
-                                                        <a href="#" data-toggle="modal"  data-target="#productModal" title="Quickview"><i class="zmdi zmdi-zoom-in"></i></a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" title="Thêm vào giỏ hàng"><i class="zmdi zmdi-shopping-cart-plus"></i></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- product-item end -->
+                                    @endforeach
                                 </div>                                        
                             </div>
                         </div>
                         <!-- Tab Content end -->
                         <!-- shop-pagination start -->
-                        <ul class="shop-pagination box-shadow text-center ptblr-10-30">
+                       <!--  <ul class="shop-pagination box-shadow text-center ptblr-10-30">
                             <li><a href="#"><i class="zmdi zmdi-chevron-left"></i></a></li>
                             <li><a href="#">01</a></li>
                             <li><a href="#">02</a></li>
@@ -258,7 +141,10 @@
                             <li><a href="#">...</a></li>
                             <li><a href="#">05</a></li>
                             <li class="active"><a href="#"><i class="zmdi zmdi-chevron-right"></i></a></li>
-                        </ul>
+                        </ul> -->
+                        <div class="paginates">
+                            {!! $products->links() !!}
+                        </div>
                         <!-- shop-pagination end -->
                     </div>
                 </div>
