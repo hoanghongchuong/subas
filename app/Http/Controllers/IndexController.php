@@ -145,7 +145,7 @@ class IndexController extends Controller
                 $products = $products->orderBy($this->sortType[$req->sort]['order'][0], $this->sortType[$req->sort]['order'][1]);
             }
         }
-        $products = $products->paginate(16);
+        $products = $products->orderBy('id', 'desc')->paginate(9);
         if (count($appends)) {
             $products = $products->appends($appends);
         }
