@@ -1834,4 +1834,19 @@ table {width: 100%}
 
 
 #at4-share{display: none;}
-
+.add-cart-detail{
+   background: #666 none repeat scroll 0 0;
+  border: medium none;
+  border-radius: 3px;
+  color: #ffffff;
+  float: left;
+  font-weight: 700;
+  height: 45px;
+  margin-left: 15px;
+  padding: 0 55px;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+}
+.add-cart-detail:hover{
+  background: #FF7F00 none repeat scroll 0 0;
+}
